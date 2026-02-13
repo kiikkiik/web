@@ -1,0 +1,91 @@
+/* ФОН СТРАНИЦЫ */
+body {
+    background-color: #fff2bc;
+    color: #5c3a30;
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ЗАГОЛОВОК СКОРПИОНА - КРАСНЫЙ */
+#scorpion h2 {
+    color: #8B0000;
+    text-align: center;
+    border-bottom: 3px solid #8B0000;
+    padding-bottom: 10px;
+}
+
+/* ЗАГОЛОВОК ДЕВЫ - ЗОЛОТОЙ */
+#virgo h2 {
+    color: #DAA520;
+    text-align: center;
+    border-bottom: 3px solid #DAA520;
+    padding-bottom: 10px;
+}
+
+/* ЗАГОЛОВОК ВОДОЛЕЯ - СИНИЙ */
+#aquarius h2 {
+    color: #4169E1;
+    text-align: center;
+    border-bottom: 3px solid #4169E1;
+    padding-bottom: 10px;
+}
+
+/* СТИЛИ ДЛЯ КОЛОНК */
+.column {
+    background-color: #FFF5E6;
+    border: 2px solid #D2691E;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* СТИЛИ ДЛЯ ИЗОБРАЖЕНИЙ */
+.tort-image {
+    display: block;
+    margin: 15px auto;
+    border: 3px solid #8B4513;
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* СТИЛИ ДЛЯ ТАБЛИЦЫ */
+.table {
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.table thead {
+    background-color: #8B4513;
+    color: white;
+}
+
+.table th {
+    border-color: #8B4513;
+}
+
+/* СТИЛИ ДЛЯ КНОПОК */
+.btn {
+    margin: 10px 0;
+}
+
+.btn-primary {
+    background-color: #8B0000;
+    border-color: #8B0000;
+}
+
+.btn-success {
+    background-color: #DAA520;
+    border-color: #DAA520;
+    color: #333;
+}
+
+.btn-default {
+    background-color: #4169E1;
+    border-color: #4169E1;
+    color: white;
+}

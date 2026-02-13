@@ -1,0 +1,109 @@
+/*сброс стилей*/
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FFF8DC;
+    color: #5D4037;
+    font-family: Arial, sans-serif;
+}
+
+/*фиксированное позиционирование*/
+.fixed-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #8B4513;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.fixed-menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.fixed-menu a:hover {
+    text-decoration: underline;
+}
+
+/*относительное позиционирование*/
+.relative-box {
+    position: relative;
+    background-color: #D2691E;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+/*абсолютное позиционирование*/
+.absolute-badge {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background-color: #FFD700;
+    color: #8B4513;
+    padding: 5px 15px;
+    font-weight: bold;
+    border-radius: 15px;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+}
+
+/*плавающие колонки*/
+.container {
+    width: 90%;
+    margin: 40px auto;
+}
+
+.column {
+    float: left;
+    width: 30%;
+    margin: 10px 1.5%;
+    background-color: #FFF5E6;
+    padding: 20px;
+    border: 2px solid #D2691E;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.column img {
+    display: block;
+    margin: 15px auto;
+    border: 2px solid #8B4513;
+    border-radius: 5px;
+}
+
+/*отчистка обтеканий*/
+.clearfix {
+    clear: both;
+}
+
+/*дополнительные стили*/
+h1 {
+    margin: 0;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: #8B4513;
+    border-bottom: 2px dashed #D2691E;
+    padding-bottom: 8px;
+}
+
+ul, ol {
+    padding-left: 20px;
+    margin: 15px 0;
+}
+
+.footer {
+    background-color: #8B4513;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}

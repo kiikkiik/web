@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Студент">
+    <meta name="keywords" content="торты, зодиак, скорпион, дева, водолей, bootstrap">
+    <meta name="description" content="Тортики по знаку зодиака">
+    <title>Тортики по знаку зодиака</title>
+    
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <style>
+        body {
+            background-color: #fff6d2 !important;
+            color: #5c3a30 !important;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!--навигационное меню-->
+     <!--шапка сайта с ссылками-->
+    <nav class="navbar navbar-default">   <!--стандартный серый стиль-->
+        <div class="container-fluid">   <!--название сайта (жирным)-->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Тортики по зодиаку</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Главная</a></li>   <!--active — подсвечивает текущую страницу-->
+                <li><a href="form.html">Заказать торт</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--контейнер для центрирования и адаптивной верстки-->
+<div class="container-fluid">
+    
+    <!--сеточная верстка (разные размеры ячеек)-->
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+            <h2>Скорпион</h2>
+            <p>Торт "Черный лес" с вишневой начинкой и темным шоколадом.</p>
+            
+            <!-- Изображение сразу под описанием -->
+            <img src="cherny-les.jpg.png" alt="Торт Черный лес" class="tort-image">
+            
+            <!--Иконки Glyphicons(маленькие картинки, которые можно вставлять куда угодно)-->
+            <!--Кнопки-->
+            <button class="btn btn-primary">
+                <span class="glyphicon glyphicon-star"></span> Подробнее
+            </button>
+        </div>
+        
+        <div class="col-xs-12 col-sm-6 col-md-4">
+            <h2>Дева</h2>
+            <p>Торт "Тирамису" — изысканный и сбалансированный десерт.</p>
+            
+            <!-- Изображение сразу под описанием -->
+            <img src="tiramisu.jpg" alt="Торт Тирамису" class="tort-image">
+            
+            <!--Группы кнопок-->
+            <div class="btn-group">
+                <button class="btn btn-success">
+                    <span class="glyphicon glyphicon-heart"></span> Заказать
+                </button>
+                <button class="btn btn-default">
+                    <span class="glyphicon glyphicon-info-sign"></span> Описание
+                </button>
+            </div>
+        </div>
+        
+        <div class="col-xs-12 col-sm-12 col-md-4">
+            <h2>Водолей</h2>
+            <p>Торт "Галактика" — необычный десерт с синими и фиолетовыми оттенками.</p>
+            
+            <!-- Изображение сразу под описанием -->
+            <img src="galaktika.jpg" alt="Торт Галактика" class="tort-image">
+            
+            <!--Несколько иконок Glyphicons-->
+            <p>
+                <span class="glyphicon glyphicon-cloud"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-gift"></span>
+            </p>
+        </div>
+    </div>
+
+        <!--Таблицы-->
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>Сравнение тортов</h2>
+                <table class="table table-bordered"> <!--с рамками вокруг всех ячеек-->>
+                    <thead>
+                        <tr>
+                            <th>Знак зодиака</th>
+                            <th>Торт</th>
+                            <th>Цена (руб.)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Скорпион</td>
+                            <td>Черный лес</td>
+                            <td>2500</td>
+                        </tr>
+                        <tr>
+                            <td>Дева</td>
+                            <td>Тирамису</td>
+                            <td>2800</td>
+                        </tr>
+                        <tr>
+                            <td>Водолей</td>
+                            <td>Галактика</td>
+                            <td>3200</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!--Сгруппированные формы ввода-->
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <h2>Подписка на новости</h2>
+                <div class="input-group"> <!--объединяет элементы-->
+                    <span class="input-group-addon">@</span><!--дополнение слева-->
+                    <input type="text" class="form-control" placeholder="Ваш email"> <!--само поле ввода-->>
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">Подписаться</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
