@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Студент">
+    <title>Лабораторная работа №6</title>
+    
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- НАВИГАЦИОННОЕ МЕНЮ -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">Тортики по зодиаку</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="form.html">Заказать торт</a></li>
+                <li class="active"><a href="lab6.html">Лабораторная №6</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- КОНТЕЙНЕР -->
+    <div class="container-fluid">
+        
+        <!-- ЗАГОЛОВОК -->
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="text-center" style="margin-top: 30px; color: #8B4513;">Лабораторная работа №6</h1>
+                <h2 class="text-center" style="color: #5c3a30; margin-bottom: 40px;">Динамический HTML и JavaScript</h2>
+            </div>
+        </div>
+        
+        <!-- ПОЛЕ ВВОДА -->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-xs-12 col-md-8 col-md-offset-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Введите последовательность чисел</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="input-group input-group-lg">
+                            <input type="text" id="numbersInput" class="form-control" placeholder="10, 20, 30, 40, 50" value="10, 20, 30, 40, 50">
+                            <span class="input-group-btn">
+                                <button class="btn btn-primary" type="button" onclick="calculateAll()">
+                                    <span class="glyphicon glyphicon-ok"></span> Вычислить
+                                </button>
+                            </span>
+                        </div>
+                        <p class="help-block">Введите числа через запятую (например: 10, 20, 30, 40, 50)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- РЕЗУЛЬТАТЫ -->
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <span class="glyphicon glyphicon-plus"></span> Задание 1
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <h4>Сумма элементов</h4>
+                        <p><strong>Последовательность:</strong></p>
+                        <p id="seq1" style="font-family: monospace; background-color: #f9f9f9; padding: 10px; border-radius: 5px;">10, 20, 30, 40, 50</p>
+                        
+                        <hr>
+                        
+                        <h4>Результат:</h4>
+                        <p style="font-size: 32px; color: #8B0000; font-weight: bold;" id="result1">150</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-xs-12 col-md-4">
+                <div class="panel panel-warning">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <span class="glyphicon glyphicon-minus"></span> Задание 2
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <h4>Минимальный элемент</h4>
+                        <p><strong>Последовательность:</strong></p>
+                        <p id="seq2" style="font-family: monospace; background-color: #f9f9f9; padding: 10px; border-radius: 5px;">10, 20, 30, 40, 50</p>
+                        
+                        <hr>
+                        
+                        <h4>Результат:</h4>
+                        <p style="font-size: 32px; color: #DAA520; font-weight: bold;" id="result2">10</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-xs-12 col-md-4">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <span class="glyphicon glyphicon-equalizer"></span> Задание 10
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <h4>Среднее арифметическое</h4>
+                        <p><strong>Последовательность:</strong></p>
+                        <p id="seq3" style="font-family: monospace; background-color: #f9f9f9; padding: 10px; border-radius: 5px;">10, 20, 30, 40, 50</p>
+                        
+                        <hr>
+                        
+                        <h4>Результат:</h4>
+                        <p style="font-size: 32px; color: #4169E1; font-weight: bold;" id="result3">30.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- ПОДКЛЮЧЕНИЕ СКРИПТА -->
+    <script src="script.js"></script>
+
+</body>
+</html>
