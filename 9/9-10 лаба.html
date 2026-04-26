@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Студент">
+    <meta name="keywords" content="торты, зодиак, скорпион, дева, водолей, bootstrap, scss">
+    <meta name="description" content="Тортики по знаку зодиака — лабораторная работа №7">
+    <title>Тортики по знаку зодиака - Лабораторная №9</title>
+    
+    <!--подключение-bootstrap-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    
+    <!--подключение-скомпилированного-css-из-scss-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!--навигационное-меню-->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Тортики по зодиаку</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Главная</a></li>
+                <li><a href="form.html">Заказать торт</a></li>
+                <li class="active"><a href="lab6.html">Лабораторная №6</a></li>
+                <li><a href="lab8.html">Лабораторная №8</a></li>
+                <li class="active"><a href="lab9.html">Лабораторная №9</a></li>
+                <li><a href="lab10.html">Лабораторная №10</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--поле поиска(событие фокус)-->
+    <div class="container-fluid" style="margin: 20px 0;">
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3">
+                <div class="input-group input-group-lg">
+                    <input type="text" id="searchInput" class="form-control" placeholder="Поиск по тортикам...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--контейнер-->
+    <div class="container-fluid">
+        
+        <!--сеточная-верстка-->
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4 column" id="scorpion">
+                <h2>Скорпион</h2>
+                <p>Торт "Черный лес" с вишневой начинкой и темным шоколадом.</p>
+                <img id="scorpionImg" src="images/cherny-les.jpg.png" alt="Торт Черный лес" class="tort-image"style="width: 100%; height: auto; max-width: 300px;">
+                <div class="text-center" style="margin-top: 15px;">
+                    <div class="btn-group">
+                        <!-- кнопка "назад" для переключения на предыдущее изображение-->
+                        <button class="btn btn-default" onclick="changeScorpion(-1)">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </button>
+
+                        <!-- кнопка "заказать"-->
+                        <button class="btn btn-primary">
+                            <span class="glyphicon glyphicon-shopping-cart"></span> Заказать
+                        </button>
+
+                        <!-- кнопка "вперёд" для переключения на следующее изображение-->
+                        <button class="btn btn-default" onclick="changeScorpion(1)">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-xs-12 col-sm-6 col-md-4 column" id="virgo">
+                <h2>Дева</h2>
+                <p>Торт "Тирамису" - изысканный и сбалансированный десерт.</p>
+                <img id="virgoImg" src="images/tiramisu.jpg" alt="Торт Тирамису" class="tort-image"style="width: 100%; height: auto; max-width: 300px;">
+                <div class="text-center" style="margin-top: 15px;">
+                    <div class="btn-group">
+                        <button class="btn btn-default" onclick="changeVirgo(-1)">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </button>
+                        <button class="btn btn-success">
+                            <span class="glyphicon glyphicon-shopping-cart"></span> Заказать
+                        </button>
+                        <button class="btn btn-default" onclick="changeVirgo(1)">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-xs-12 col-sm-12 col-md-4 column" id="aquarius">
+                <h2>Водолей</h2>
+                <p>Торт "Галактика" - необычный десерт с синими и фиолетовыми оттенками.</p>
+                <img id="aquariusImg" src="images/galaktika.jpg" alt="Торт Галактика" class="tort-image"style="width: 100%; height: auto; max-width: 300px;">
+                <div class="text-center" style="margin-top: 15px;">
+                    <div class="btn-group">
+                        <button class="btn btn-default" onclick="changeAquarius(-1)">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </button>
+                        <button class="btn btn-info">
+                            <span class="glyphicon glyphicon-shopping-cart"></span> Заказать
+                        </button>
+                        <button class="btn btn-default" onclick="changeAquarius(1)">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--таблица-->
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>Сравнение тортов</h2>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Знак зодиака</th>
+                            <th>Торт</th>
+                            <th>Цена (руб.)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Скорпион</td>
+                            <td>Черный лес</td>
+                            <td>2500</td>
+                        </tr>
+                        <tr>
+                            <td>Дева</td>
+                            <td>Тирамису</td>
+                            <td>2800</td>
+                        </tr>
+                        <tr>
+                            <td>Водолей</td>
+                            <td>Галактика</td>
+                            <td>3200</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!--сгруппированная-форма-ввода-->
+        <div class="row" style="margin-bottom:40px;">
+            <div class="col-xs-12 col-md-6">
+                <h2>Подписка на новости</h2>
+                <div class="input-group">
+                    <span class="input-group-addon">@</span>
+                    <input type="text" class="form-control" placeholder="Ваш email">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">Подписаться</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- ИСТОЧНИКИ -->
+<div class="row" style="margin-top: 40px; padding: 20px; background-color: #FFF5E6; border-radius: 10px; border: 1px solid #D2691E;">
+    <div class="col-xs-12">
+        <h3>Источники</h3>
+        <ul>
+            <li><a href="https://horoscopes.rambler.ru/" target="_blank" class="text-muted">Гороскопы по знакам зодиака</a></li>
+            <li><a href="https://www.shutterstock.com/ru/search/торты" target="_blank" class="text-muted">Изображения тортов</a></li>
+        </ul>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

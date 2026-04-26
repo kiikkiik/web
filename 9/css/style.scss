@@ -1,0 +1,131 @@
+/*=====переменные-цветов=====*/
+$cream-bg:#fff2bc;
+$brown-text:#5c3a30;
+$scorpio-red:#8B0000;
+$virgo-gold:#DAA520;
+$aquarius-blue:#4169E1;
+$border-brown:#8B4513;
+$shadow-color:rgba(0,0,0,0.1);
+
+/*=====стили-для-всей-страницы=====*/
+body{
+    background-color:$cream-bg;
+    color:$brown-text;
+    font-family:'Times New Roman',serif;
+    margin:0;
+    padding:0;
+}
+
+/*=====стили-для-заголовков=====*/
+h2{
+    border-bottom:2px dashed $border-brown;
+    padding-bottom:8px;
+    margin-top:25px;
+}
+
+/*=====стили-для-колонок-с-вложенностью=====*/
+.column{
+    background-color:#FFF5E6;
+    border:2px solid $border-brown;
+    border-radius:10px;
+    padding:20px;
+    margin-bottom:25px;
+    box-shadow:0 3px 10px $shadow-color;
+    
+    /*вложенность:стили-для-изображений-внутри-колонки*/
+    .tort-image{
+        display:block;
+        margin:15px auto;
+        border:3px solid $border-brown;
+        border-radius:8px;
+        max-width:100%;
+        height:auto;
+        box-shadow:0 5px 15px $shadow-color;
+        
+        /*псевдокласс-с-вложенностью*/
+        &:hover{
+            transform:scale(1.03);
+            transition:transform 0.3s;
+        }
+    }
+}
+
+/*=====цветные-заголовки-через-переменные=====*/
+#scorpion{
+    h2{
+        color:$scorpio-red;
+        text-align:center;
+        border-bottom-color:$scorpio-red;
+    }
+}
+
+#virgo{
+    h2{
+        color:$virgo-gold;
+        text-align:center;
+        border-bottom-color:$virgo-gold;
+    }
+}
+
+#aquarius{
+    h2{
+        color:$aquarius-blue;
+        text-align:center;
+        border-bottom-color:$aquarius-blue;
+    }
+}
+
+/*=====миксин-для-кнопок=====*/
+@mixin button-style($bg-color,$text-color:white){
+    background-color:$bg-color;
+    border-color:$bg-color;
+    color:$text-color;
+    transition:all 0.3s;
+    
+    &:hover{
+        transform:scale(1.05);
+        box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    }
+}
+
+/*=====применение-миксина=====*/
+.btn-primary{
+    @include button-style($scorpio-red);
+}
+
+.btn-success{
+    @include button-style($virgo-gold,#333);
+}
+
+.btn-info{
+    @include button-style($aquarius-blue);
+}
+
+/*=====стили-для-таблицы=====*/
+.table{
+    background-color:white;
+    border-radius:5px;
+    overflow:hidden;
+    
+    thead{
+        background-color:$border-brown;
+        color:white;
+    }
+    
+    th{
+        border-color:$border-brown;
+    }
+}
+
+/*=====стили-для-формы-ввода=====*/
+.input-group{
+    margin-top:20px;
+    
+    .form-control{
+        border-radius:5px 0 0 5px;
+    }
+    
+    .btn{
+        border-radius:0 5px 5px 0;
+    }
+}

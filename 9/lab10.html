@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №10</title>
+    
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        .form-section {
+            background-color: #fdf9f5;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border: 1px solid #e8d9c9;
+        }
+        .dependency-info {
+            font-size: 12px;
+            color: #8B4513;
+            margin-top: 5px;
+            font-style: italic;
+        }
+        .submit-btn {
+            transition: all 0.3s ease;
+            padding: 12px 24px;
+            font-size: 16px;
+        }
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        .validation-error {
+            color: #dc3545;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">Тортики по зодиаку</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="form.html">Заказать торт</a></li>
+                <li><a href="lab6.html">Лабораторная №6</a></li>
+                <li><a href="lab7.html">Лабораторная №7</a></li>
+                <li><a href="lab8.html">Лабораторная №8</a></li>
+                <li><a href="lab9.html">Лабораторная №9</a></li>
+                <li class="active"><a href="lab10.html">Лабораторная №10</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="text-center" style="margin-top: 30px; color: #8B4513;">Лабораторная работа №10</h1>
+                <h2 class="text-center" style="color: #5c3a30; margin-bottom: 40px;">Формы и элементы форм</h2>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-xs-12 col-md-8 col-md-offset-2">
+                <div class="form-section">
+                    <h3 class="text-center">Форма заказа торта</h3>
+                    
+                    <!-- ФОРМА -->
+                    <form id="cakeOrderForm" novalidate>
+                        
+                        <!-- Имя клиента -->
+                        <div class="form-group">
+                            <label for="clientName">Имя клиента *</label>
+                            <input type="text" 
+                                   id="clientName" 
+                                   name="clientName" 
+                                   class="form-control" 
+                                   placeholder="Введите ваше имя"
+                                   required>
+                            <div class="validation-error" id="nameError"></div>
+                        </div>
+                        
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" 
+                                   id="email" 
+                                   name="email" 
+                                   class="form-control" 
+                                   placeholder="example@email.com"
+                                   required>
+                            <div class="validation-error" id="emailError"></div>
+                        </div>
+                        
+                        <!-- Знак зодиака -->
+                        <div class="form-group">
+                            <label>Знак зодиака *</label>
+                            <div class="radio">
+                                <label><input type="radio" name="zodiac" value="scorpio" required> Скорпион</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="zodiac" value="virgo"> Дева</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="zodiac" value="aquarius"> Водолей</label>
+                            </div>
+                            <div class="validation-error" id="zodiacError"></div>
+                        </div>
+                        
+                        <!-- Тип торта -->
+                        <div class="form-group">
+                            <label for="cakeType">Тип торта *</label>
+                            <select id="cakeType" name="cakeType" class="form-control" required>
+                                <option value="">Выберите торт</option>
+                                <option value="blackForest">Черный лес</option>
+                                <option value="tiramisu">Тирамису</option>
+                                <option value="galaxy">Галактика</option>
+                                <option value="custom">Свой вариант</option>
+                            </select>
+                            <div class="dependency-info">Если выбран "Свой вариант", появится дополнительное поле</div>
+                            <div class="validation-error" id="cakeTypeError"></div>
+                        </div>
+                        
+                        <!-- Свое описание торта (появляется при выборе "Свой вариант") -->
+                        <div class="form-group" id="customCakeGroup" style="display: none;">
+                            <label for="customCake">Описание своего торта *</label>
+                            <textarea id="customCake" 
+                                      name="customCake" 
+                                      class="form-control" 
+                                      rows="3" 
+                                      placeholder="Опишите желаемый торт"
+                                      disabled></textarea>
+                            <div class="validation-error" id="customCakeError"></div>
+                        </div>
+                        
+                        <!-- Дополнительные опции -->
+                        <div class="form-group">
+                            <label>Дополнительные опции</label>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="options" value="candles"> Свечи</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="options" value="inscription"> Надпись на торте</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="options" value="delivery"> Доставка</label>
+                            </div>
+                        </div>
+                        
+                        <!-- Комментарий -->
+                        <div class="form-group">
+                            <label for="comment">Комментарий</label>
+                            <textarea id="comment" 
+                                      name="comment" 
+                                      class="form-control" 
+                                      rows="2" 
+                                      placeholder="Дополнительные пожелания"></textarea>
+                        </div>
+                        
+                        <!-- Кнопка отправки -->
+                        <div class="form-group text-center">
+                            <button type="submit" 
+                                    id="submitBtn" 
+                                    class="btn btn-primary submit-btn" 
+                                    disabled>
+                                <span class="glyphicon glyphicon-shopping-cart"></span> Отправить заказ
+                            </button>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <!-- РЕЗУЛЬТАТЫ -->
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Результаты отправки</h3>
+                    </div>
+                    <div class="panel-body">
+                        <pre id="formDataOutput" 
+                             style="background-color: #f5f5f5; 
+                                    padding: 15px; 
+                                    border-radius: 5px; 
+                                    min-height: 100px;
+                                    white-space: pre-wrap;"></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Подключение скрипта -->
+    <script src="script10.js"></script>
+
+</body>
+</html>

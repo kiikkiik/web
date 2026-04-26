@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №9</title>
+    
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        .dynamic-item {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        .dynamic-item:hover {
+            background-color: #e9ecef;
+            transform: translateX(5px);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">Тортики по зодиаку</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="form.html">Заказать торт</a></li>
+                <li><a href="lab6.html">Лабораторная №6</a></li>
+                <li><a href="lab8.html">Лабораторная №8</a></li>
+                <li class="active"><a href="lab9.html">Лабораторная №9</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="text-center" style="margin-top: 30px; color: #8B4513;">Лабораторная работа №9</h1>
+                <h2 class="text-center" style="color: #5c3a30; margin-bottom: 40px;">Динамическое изменение DOM</h2>
+            </div>
+        </div>
+        
+        <!-- ПАНЕЛЬ УПРАВЛЕНИЯ -->
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Управление списком тортиков</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <div class="input-group">
+                                    <input type="text" id="cakeName" class="form-control" placeholder="Название торта">
+                                    <span class="input-group-btn">
+                                        <button id="addBtn" class="btn btn-success" type="button">
+                                            <span class="glyphicon glyphicon-plus"></span> Добавить
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-6 text-right">
+                                <button id="clearBtn" class="btn btn-danger">
+                                    <span class="glyphicon glyphicon-trash"></span> Очистить всё
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- СПИСОК ТОРТИКОВ -->
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Список тортиков (динамически созданный)</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div id="cakesList">
+                            <!-- Сюда будут добавляться элементы -->
+                            <p class="text-muted">Список пуст. Добавьте первый торт!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ИНФОРМАЦИЯ О РЕАЛИЗАЦИИ -->
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Что реализовано</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul>
+                            <li><strong>Разные способы выбора элементов:</strong> 
+                                <code>getElementById()</code>, 
+                                <code>querySelector()</code>, 
+                                <code>getElementsByClassName()</code>
+                            </li>
+                            <li><strong>Создание элементов:</strong> 
+                                <code>createElement()</code>, 
+                                <code>createTextNode()</code>
+                            </li>
+                            <li><strong>Добавление/удаление:</strong> 
+                                <code>appendChild()</code>, 
+                                <code>remove()</code>
+                            </li>
+                            <li><strong>Обработка событий:</strong> 
+                                <code>addEventListener()</code> для кнопок и кликов по элементам
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Подключение скрипта -->
+    <script src="script9.js"></script>
+
+</body>
+</html>
