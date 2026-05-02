@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Тортики по зодиаку</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<!--ЛАБОРАТОРНАЯ РАБОТА №12-->
+<div class="container-fluid" style="margin-top: 50px; padding: 30px; background-color: #FFF5E6; border: 2px solid #D2691E; border-radius: 10px;">
+    <h2 class="text-center">Лабораторная работа №12 — Анимация jQuery</h2>
+    
+    <!--панель управления с анимацией-->
+    <div class="row" style="margin-top: 30px;">
+        <div class="col-xs-12">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Управление анимацией</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="btn-group" style="margin-bottom: 15px;">
+                        <button id="showBtn" class="btn btn-success">Показать все тортики</button>
+                        <button id="hideBtn" class="btn btn-danger">Скрыть все тортики</button>
+                        <button id="toggleBtn" class="btn btn-primary">Переключить видимость</button>
+                    </div>
+                    
+                    <div class="btn-group" style="margin-bottom: 15px;">
+                        <button id="fadeInBtn" class="btn btn-default">Появиться плавно</button>
+                        <button id="fadeOutBtn" class="btn btn-default">Исчезнуть плавно</button>
+                    </div>
+                    
+                    <div class="btn-group">
+                        <button id="slideDownBtn" class="btn btn-warning">Выдвинуть</button>
+                        <button id="slideUpBtn" class="btn btn-warning">Свернуть</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- АНИМИРУЕМЫЕ БЛОКИ -->
+    <div class="row" id="animatableBlocks">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="panel panel-default animated-block" style="background-color: #fdf9f5;">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Торт Скорпиона</h3>
+                </div>
+                <div class="panel-body text-center">
+                    <img src="images/cherny-les.jpg.png" alt="Скорпион" class="img-responsive" style="max-width: 200px; margin: 0 auto;">
+                    <p>Черный лес с вишней</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="panel panel-default animated-block" style="background-color: #f8f9fa;">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Торт Девы</h3>
+                </div>
+                <div class="panel-body text-center">
+                    <img src="images/tiramisu.jpg" alt="Дева" class="img-responsive" style="max-width: 200px; margin: 0 auto;">
+                    <p>Классический тирамису</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-xs-12 col-sm-12 col-md-4">
+            <div class="panel panel-default animated-block" style="background-color: #f0f8ff;">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Торт Водолея</h3>
+                </div>
+                <div class="panel-body text-center">
+                    <img src="images/galaktika.jpg" alt="Водолей" class="img-responsive" style="max-width: 200px; margin: 0 auto;">
+                    <p>Галактика с синими оттенками</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ПРОИЗВОЛЬНАЯ АНИМАЦИЯ -->
+    <div class="row" style="margin-top: 30px;">
+        <div class="col-xs-12">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Произвольная анимация</h3>
+                </div>
+                <div class="panel-body">
+                    <div id="customAnimationBox" style="width: 100px; height: 100px; background-color: #8B4513; margin: 20px auto; border-radius: 10px;"></div>
+                    <div class="text-center">
+                        <button id="animateBtn" class="btn btn-success">Запустить анимацию</button>
+                        <button id="stopBtn" class="btn btn-warning">Остановить анимацию</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+    <script src="script12.js"></script>
+
+</body>
+</html>
