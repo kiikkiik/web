@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Тортики по зодиаку</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<!-- ЛАБОРАТОРНАЯ РАБОТА №13 -->
+<div class="container-fluid" style="margin-top: 50px; padding: 30px; background-color: #FFF5E6; border: 2px solid #D2691E; border-radius: 10px;">
+    <h2 class="text-center">Лабораторная работа №13 - Cookies</h2>
+    
+    <!-- ФОРМА СОХРАНЕНИЯ ДАННЫХ -->
+    <div class="row" style="margin-top: 30px;">
+        <div class="col-xs-12 col-md-8 col-md-offset-2">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Форма с сохранением данных</h3>
+                </div>
+                <div class="panel-body">
+                    <form id="cookieForm">
+                        <div class="form-group">
+                            <label for="userName">Ваше имя:</label>
+                            <input type="text" id="userName" name="userName" class="form-control" placeholder="Введите имя">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Любимый торт:</label>
+                            <div class="radio">
+                                <label><input type="radio" name="favoriteCake" value="blackForest"> Черный лес</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="favoriteCake" value="tiramisu"> Тирамису</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="favoriteCake" value="galaxy"> Галактика</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="comments">Комментарий:</label>
+                            <textarea id="comments" name="comments" class="form-control" rows="3" placeholder="Ваши пожелания"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="button" id="saveBtn" class="btn btn-success">
+                                <span class="glyphicon glyphicon-floppy-disk"></span> Сохранить в cookies
+                            </button>
+                            <button type="button" id="loadBtn" class="btn btn-info">
+                                <span class="glyphicon glyphicon-download"></span> Загрузить из cookies
+                            </button>
+                            <button type="button" id="clearBtn" class="btn btn-danger">
+                                <span class="glyphicon glyphicon-trash"></span> Очистить cookies
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <div class="alert alert-info" style="margin-top: 20px;">
+                        <strong>Как это работает:</strong><br>
+                        • При нажатии "Сохранить" данные формы записываются в cookies<br>
+                        • При следующем открытии страницы данные можно загрузить кнопкой "Загрузить"<br>
+                        • Cookies сохраняются на 7 дней
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ИНФОРМАЦИЯ О COOKIES -->
+    <div class="row" style="margin-top: 30px;">
+        <div class="col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Текущие cookies</h3>
+                </div>
+                <div class="panel-body">
+                    <pre id="cookiesInfo" style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; min-height: 100px;"></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+</div>
+    <script src="script13.js"></script>
+
+</body>
+</html>
